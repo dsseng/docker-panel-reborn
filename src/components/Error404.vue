@@ -39,6 +39,7 @@ export default {
 }
 </script>
 
+<style lang="stylus" scoped>
 <style lang="stylus">
 .error-page
   .error-code

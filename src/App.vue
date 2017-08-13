@@ -2,6 +2,9 @@
   <!-- Don't drop "q-app" class -->
   <div id="q-app">
     <q-layout>
+      <!--
+            Router tabs
+          -->
       <div slot="header" class="toolbar">
         <q-toolbar-title :padding="0">
           Docker dashboard
@@ -13,8 +16,8 @@
           <q-tab route="/Old" icon="settings">
             Settings
           </q-tab>
-          <q-tab route="/Error404" icon="fingerprint">
-            My account
+          <q-tab route="/MyAccount" icon="fingerprint">
+            My Account
           </q-tab>
         </q-tabs>
       </div>
@@ -35,7 +38,32 @@
 /*
  * Root component
  */
-export default {}
+import ls from 'lscache'
+
+export default {
+  sockets: {
+    auth (obj) { // If server requests our token, response to it!
+      if (obj.jwtreq) {
+        this.$socket.emit('auth', { jwt: this.getToken() })
+      }
+    }
+  },
+  methods: {
+    getToken () {
+      try {
+        if (ls.get('jwt') != null) {
+          return ls.get('jwt')
+        }
+        else {
+          return ''
+        }
+      }
+      catch (e) {
+        return ''
+      }
+    }
+  }
+}
 </script>
 
 <style></style>

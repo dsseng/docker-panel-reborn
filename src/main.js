@@ -10,6 +10,13 @@ import Vue from 'vue'
 import Quasar from 'quasar'
 import router from './router'
 
+import io from 'socket.io-client'
+import VueSocketIO from 'vue-socket.io'
+
+export const SocketInstance = io()
+
+Vue.use(VueSocketIO, SocketInstance)
+
 Vue.use(Quasar) // Install Quasar Framework
 
 Quasar.start(() => {

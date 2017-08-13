@@ -1,16 +1,16 @@
 <template>
-  <div class="logo-container non-selectable no-pointer-events">
-    <div class="logo" :style="position">
-      <img src="~assets/quasar-logo.png">
-      <p class="caption text-center">
-        <span v-if="orienting || rotating">Tilt your device.</span>
-        <template v-else>
-          <span class="desktop-only">Move your mouse.</span>
-          <span class="touch-only">Touch screen and move.</span>
-        </template>
-      </p>
-    </div>
+<div class="logo-container non-selectable no-pointer-events">
+  <div class="logo" :style="position">
+    <img src="~assets/quasar-logo.png">
+    <p class="caption text-center">
+      <span v-if="orienting || rotating">Tilt your device.</span>
+      <template v-else>
+        <span class="desktop-only">Move your mouse.</span>
+        <span class="touch-only">Touch screen and move.</span>
+      </template>
+    </p>
   </div>
+</div>
 </template>
 
 <script>
@@ -134,7 +134,7 @@ export default {
 }
 </script>
 
-<style lang="stylus">
+<style lang="stylus" scoped>
 .logo-container
   width 192px
   height 268px

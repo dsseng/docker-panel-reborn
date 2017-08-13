@@ -3,7 +3,7 @@
 Docker control panel
 !WARNING! You must create file named "database.js" with content like 
 <code>module.exports = {
-  'secret':'<any random string (for JWT signing)>',
-  'database': '<your mongo connection>'
+  'secret':'any random string (for JWT signing)',
+  'database': 'your db connection'
 };</code>
 in "config" folder!
