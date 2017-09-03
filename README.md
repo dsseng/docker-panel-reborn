@@ -1,5 +1,7 @@
 # docker-panel-reborn
 
+STOPPED<br/>
+
 Docker control panel<br/>
 !WARNING! You must create file named "database.js" with content like<br/> 
 <code>module.exports = {
