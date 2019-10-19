@@ -64,7 +64,7 @@
     "json-loader": "^0.5.4",
     "jsonwebtoken": "^7.4.2",
     "lscache": "^1.1.0",
-    "mongoose": "^4.11.6",
+    "mongoose": "^5.4.10",
     "opn": "^5.0.0",
     "postcss-loader": "^1.0.0",
     "purify-css": "^1.2.2",
